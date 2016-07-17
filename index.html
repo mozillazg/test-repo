@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="referrer" content="never">
+    <title>WebUI</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link href="/css/app.css" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    body {
+      padding-top: 0;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Content -->
+    <div class="container" id="app">
+
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header"><a href="/">KEY/VALUE</a></h1>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <div >
+        <!-- Projects Row -->
+        <div class="row">
+          <div class="col-md-5 ">
+            <nav>{{ path }}</nav><a href="#" v-on:click.stop="viewUpNodeEvent(path)">up</a>
+            <ul v-for="node in nodes">
+              <li><a href="#" v-on:click.stop="viewNodeEvent(node)">{{ node.key }}</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-7 "></div>
+          <template v-if="value !== ''">
+            {{ value }}
+          </template>
+        <!-- /.row -->
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+          </div>
+        </div>
+        <!-- /.row -->
+      </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.9.3/vue-resource.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
