@@ -4,4 +4,3 @@ python: 3.5
 
 script:
   - python -V
-  - error
